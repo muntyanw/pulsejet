@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Моделирование - Pulsejet" %}{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>{% trans "Моделирование Рабочего Процесса" %}</h1>
+  <p>{% trans "Интерактивные инструменты для создания моделей рабочих процессов." %}</p>
+  <script>
+    $(document).ready(function(){
+      console.log("{% trans 'Страница моделирования загружена' %}");
+    });
+  </script>
+</div>
+{% endblock %}

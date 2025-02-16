@@ -1,0 +1,79 @@
+{% load i18n %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand font-weight-bold fs-2" href="/">{% trans "Pulsejet" %}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto ms-4">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Главная" %}
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDescription" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Описание Моделирования Рабочего Процесса" %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownDescription">
+            <li><a class="dropdown-item" href="/description/">{% trans "Описание Моделирования Рабочего Процесса" %}</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownModeling" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Моделирование Рабочего Процесса" %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownModeling">
+            <li><a class="dropdown-item" href="/modeling/">{% trans "Моделирование Рабочего Процесса" %}</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFAQ" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Часто задаваемые вопросы" %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownFAQ">
+            <li><a class="dropdown-item" href="/faq/">{% trans "Часто задаваемые вопросы" %}</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        {% if user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {% trans "Личный кабинет" %} ({{ user.username }})
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownUser">
+              <li><a class="dropdown-item" href="/account/">{% trans "Личный кабинет" %}</a></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">{% trans "Выход" %}</a></li>
+            </ul>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">{% trans "Вход" %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">{% trans "Регистрация" %}</a>
+          </li>
+        {% endif %}
+        <!-- Переключатель языка -->
+        <li class="nav-item">
+          <form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center ms-3">
+            {% csrf_token %}
+            <select name="language" class="form-select form-select-sm" onchange="this.form.submit()">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% for lang in LANGUAGES %}
+                <option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>
+                  {{ lang.1 }}
+                </option>
+              {% endfor %}
+            </select>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="clear:both;"></div>
+

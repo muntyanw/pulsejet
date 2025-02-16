@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Главная - Pulsejet" %}{% endblock %}
+{% block content %}
+<div class="jumbotron p-5 bg-light rounded-3">
+  <h1 class="display-4">{% trans "Добро пожаловать на портал Pulsejet!" %}</h1>
+  <p class="lead">{% trans "Инновационное решение для моделирования рабочих процессов." %}</p>
+  <hr class="my-4">
+  <p>{% trans "Узнайте больше о возможностях платформы и зарегистрируйтесь для доступа к личному кабинету." %}</p>
+  <a class="btn btn-primary btn-lg" href="/description/" role="button">{% trans "Подробнее" %}</a>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Личный кабинет - Pulsejet" %}{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-3">
+    <div class="list-group">
+      <a href="/account/" class="list-group-item list-group-item-action active">{% trans "Профиль" %}</a>
+      <a href="#" class="list-group-item list-group-item-action">{% trans "Настройки" %}</a>
+      <a href="#" class="list-group-item list-group-item-action">{% trans "История" %}</a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <h1>{% trans "Добро пожаловать" %}, {{ user.username }}!</h1>
+    <p>{% trans "Здесь вы можете управлять своим аккаунтом." %}</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+html, body.my-portal {
+  background-color: #f1f8ff; /* Светлый голубой фон */
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Навигационная панель */
+.my-portal .navbar {
+  background-color: #f44336; /* Красный */
+}
+
+.my-portal .navbar-brand {
+  font-weight: bold;
+  color: #ffffff; /* Белый цвет для текста */
+}
+
+.my-portal .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.my-portal .navbar-nav .nav-link:hover {
+  color: #ff9800; /* Оранжевый при наведении */
+}
+
+/* Контейнер */
+.my-portal .container {
+  margin-top: 40px;
+}
+
+/* Кнопки */
+.my-portal .btn-primary {
+  background-color: #ff9800; /* Оранжевый */
+  border-color: #ff9800;
+}
+
+.my-portal .btn-primary:hover {
+  background-color: #e65100; /* Темный оранжевый при наведении */
+  border-color: #e65100;
+}
+
+.my-portal .btn-secondary {
+  background-color: #039be5; /* Голубой */
+  border-color: #039be5;
+}
+
+.my-portal .btn-secondary:hover {
+  background-color: #0288d1; /* Темный голубой при наведении */
+  border-color: #0288d1;
+}
+
+/* Карточки */
+.my-portal .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.my-portal .card-header {
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+}
+
+.my-portal .card-.my-portal {
+  background-color: #ffffff;
+}
+
+/* Ссылки */
+.my-portal a {
+  color: #039be5; /* Голубой для ссылок */
+}
+
+.my-portal a:hover {
+  color: #ff9800; /* Оранжевый при наведении */
+}
+
+/* Футер */
+.my-portal footer {
+  background-color: #f44336;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container-bg-image {
+  
+  background: url("/static/images/000-background.jpg") no-repeat center center; 
+  background-size: cover;          /* Ensures the image covers the container */
+  background-attachment: scroll;   /* or 'fixed' if you want a parallax effect */
+  background-position: center;       
+  align-items: center;
+  background-repeat: no-repeat;
+  color: #ffffff;                  /* Example: white text on dark background */
+}
+
