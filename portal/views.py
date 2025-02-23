@@ -8,14 +8,23 @@ from django.urls import reverse_lazy
 class HomePageView(TemplateView):
     template_name = "guest/index.html"
 
-class ProcessDescriptionView(TemplateView):
-    template_name = "guest/description.html"
+class ProcessHowUseView(TemplateView):
+    template_name = "guest/how_use.html"
 
-class ProcessModelingView(TemplateView):
-    template_name = "guest/modeling.html"
+class ProcessAboutPMView(TemplateView):
+    template_name = "guest/about_pm.html"
+
+class  DescriptionMmView(TemplateView):
+    template_name = "guest/description_mat_model.html"
+
+class  WhatToReadView(TemplateView):
+    template_name = "guest/what-to-read.html"
 
 class FAQView(TemplateView):
     template_name = "guest/faq.html"
+
+class ContactsView(TemplateView):
+    template_name = "guest/contacts.html"
 
 # Личный кабинет (доступ только для авторизованных пользователей)
 class DashboardView(LoginRequiredMixin, TemplateView):

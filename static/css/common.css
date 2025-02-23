@@ -1,9 +1,16 @@
 html, body.my-portal {
   background-color: #f1f8ff; /* Светлый голубой фон */
   font-family: 'Arial', sans-serif;
-  height: 100%;
-  margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  background: url("/static/images/000-background.jpg") no-repeat center center; 
+  background-size: cover;          /* Ensures the image covers the container */
+  background-attachment: scroll;   /* or 'fixed' if you want a parallax effect */
+  background-position: center;       
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-size: cover;
+  margin: 0;
 }
 
 /* Навигационная панель */
@@ -67,10 +74,6 @@ html, body.my-portal {
   background-color: #ffffff;
 }
 
-/* Ссылки */
-.my-portal a {
-  color: #039be5; /* Голубой для ссылок */
-}
 
 .my-portal a:hover {
   color: #ff9800; /* Оранжевый при наведении */
@@ -85,14 +88,35 @@ html, body.my-portal {
   margin-top: 40px;
 }
 
-.container-bg-image {
-  
-  background: url("/static/images/000-background.jpg") no-repeat center center; 
-  background-size: cover;          /* Ensures the image covers the container */
-  background-attachment: scroll;   /* or 'fixed' if you want a parallax effect */
-  background-position: center;       
+.image-container {
+  /*display: flex;*/
+  justify-content: center;
   align-items: center;
-  background-repeat: no-repeat;
-  color: #ffffff;                  /* Example: white text on dark background */
+  /* height: 100vh; Full viewport height */
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-group {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #ff9800;
+  border-radius: 5px;
+} 
+
+/* .text-group {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+} */
+
+
 

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "How use - Pulsejet" %}{% endblock %}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 shadow">
+  <div class="row align-items-center">
+    <div class="col-md-12">
+      <img src="/static/images/3. How to start.png" alt="Pulsejet how to start" class="img-fluid">
+    </div>
+  </div>
+  <div class="row align-items-center"></div>
+  <div class="col-md-12 mt-4">
+    <h1 class="display-4 text-center">{{ t.text1 }} </h1>
+    <p class="text-center" style="font-size: 2em;font-weight: 300;">{{ t.text2 }}</p>
+    <hr class="my-4">
+    <div class="text-group">
+      <p style="text-align: justify;">{{ t.text3 }}</p>
+    </div>
+    <div class="text-group">
+      <p style="text-align: justify;">{{ t.text4 }}</p>
+      <p style="text-align: justify;">{{ t.text5 }}</p>
+      <p style="text-align: justify;">{{ t.text6 }}</p>
+      <p style="text-align: justify;">{{ t.text7 }}</p>
+      <p style="text-align: justify;">{{ t.text8 }}</p>
+      <p style="text-align: justify;">{{ t.text10 }}</p>
+      <p style="text-align: justify;">{{ t.text11 }}</p>
+    </div>
+
+    <p class="text-center">
+      <a class="btn btn-primary btn-lg" href="/description/" role="button">
+        {{ t.text12 }}
+        <img src="/static/images/00-button-3.png" alt="" style="max-height: 30px;margin-left: 1em;">
+      </a>
+    </p>
+    <p class="text-center">
+      <a class="btn btn-primary btn-lg" href="/description/" role="button">
+        {{ t.text13 }}
+        <img src="/static/images/00-button-3.png" alt="" style="max-height: 30px;margin-left: 1em;">
+      </a>
+    </p>
+    <p class="text-center">
+      <a class="btn btn-primary btn-lg" href="/description/" role="button">
+        {{ t.text14 }}
+        <img src="/static/images/00-button-3.png" alt="" style="max-height: 30px;margin-left: 1em;">
+      </a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}

@@ -3,6 +3,10 @@ from pathlib import Path
 
 # BASE_DIR – корневая директория, где находится manage.py
 BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 
 SECRET_KEY = 'ваш-секретный-ключ'
 DEBUG = True
@@ -47,6 +51,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # для доступа к request в шаблонах
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'portal.context_processors.texts_context',
             ],
         },
     },
@@ -66,10 +71,11 @@ DATABASES = {
 }
 
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'uk'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
+USE_L10N = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -85,9 +91,17 @@ LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login/'
 
 LANGUAGES = [
-    ('en', 'English'),
     ('uk', 'Українська'),
-    ('ru', 'Русский'),
+    ('en', 'English'),
+    
+    #('ru', 'Русский'),
 ]
 
+
+AUTH_USER_MODEL = 'portal.CustomUser'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+LANGUAGE_COOKIE_NAME = 'django_language'
+LANGUAGE_COOKIE_AGE = 1209600  # 2 недели
 
