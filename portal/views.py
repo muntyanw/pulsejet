@@ -7,7 +7,10 @@ from django.urls import reverse_lazy
 # Гостевые страницы
 class HomePageView(TemplateView):
     template_name = "guest/index.html"
-
+    
+class ModelingView(TemplateView):
+    template_name = "guest/modeling.html"
+    
 class ProcessHowUseView(TemplateView):
     template_name = "guest/how_use.html"
 

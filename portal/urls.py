@@ -8,12 +8,14 @@ from .views import (
     FAQView,
     DashboardView,
     RegisterView,
-    ContactsView
+    ContactsView,
+    ModelingView
 )
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('about-pm/', ProcessAboutPMView.as_view(), name='about-pm'),
+    path('modeling/', ModelingView.as_view(), name='modeling'),
     path('how-use/', ProcessHowUseView.as_view(), name='how-use'),
     path('description-mat-model/', DescriptionMmView.as_view(), name='description-mat-model'),
     path('what-to-read/', WhatToReadView.as_view(), name='what-to-read'),

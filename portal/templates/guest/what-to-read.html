@@ -1,9 +1,378 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block title %}{% trans "Описание - Pulsejet" %}{% endblock %}
+{% block title %}{% trans "Description mat model - Pulsejet" %}{% endblock %}
 {% block content %}
-<div class="container">
-  <h1>{% trans "Что почитать" %}</h1>
-  <p>{% trans "..." %}</p>
+<div class="p-5 mb-4 bg-light rounded-3 shadow">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center">
+      <img src="/static/images/biblio.png" alt="What to read" style="width:900px;"
+        class="img-fluid rounded shadow-sm fade-in">
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-md-12 mt-4">
+      <h1 class="display-4 text-center">{{ t.text1|safe }}</h1>
+      <p class="text-center" style="font-size: 2em;font-weight: 300;">{{ t.text2 }}</p>
+      <hr class="my-4">
+      <div class="text-group">
+        <p style="text-align: justify;">{{ t.text3|safe }}</p>
+        <p style="text-align: justify;">{{ t.text4|safe}}</p>
+      </div>
+
+      <h3>
+        <p style="text-align: justify;">{{ t.text5|safe }}</p>
+      </h3>
+
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            1. Sanders J. C. A Preliminary Evaluation of the Explosion Jet-Propulsion Engine. Memorandum Report E-243.
+            Aircraft Engine Research Laboratory. Cleveland, Ohio, NACA, Washington, 1944. - 26 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/1. 1944 NACA Report theory of pulsejet.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            2. Manganiello E.J., Michael F. Valerlino M.F. and Essig R.H. Sea-Level Performance Tests of a 22-inch
+            -Diameter
+            Pulse-Jet Engine at Various Simulated Ram Pressures. Aircraft Engine Research Laboratory. Cleveland, Ohio.
+            Memorandum Report E5J02, NACA, Washington, 1945. - 39 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/2. 1945 NACA Report Pulse jet Air speed characteristics.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            3. Manganiello E.J., Michael F. Valerlino M.F. and Breisch J.H. Endurance Tests of a 22-inch-Diameter
+            Pulse-Jet Engine with a Neoprene-Coated Valve Grid. Aircraft Engine Research Laboratory. Cleveland, Ohio.
+            Memorandum Report E5J03, NACA, Washington, 1945. - 15 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/3. 1945 NACA Report Neoprene Coated Valve Grid - 164 min.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            4. Bressman J.R. and McCready R.J. Tests of Air Valves for Intermittent-Jet Engines at Speeds of 20 and 25
+            Cycles per Second. Aircraft Engine Research Laboratory. Cleveland, Ohio. Memorandum Report E5E08, NACA,
+            Washington, 1945. - 28 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/4. 1945 NACA Report petal valve research.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            5. Valerino M.F., Essig R.H. and Hughes R.F. The Effect of Increase in Combustion-Air Inlet Temperature from
+            80° to 130° F on the Sea-Level Performance of a 22-inch-Diameter Pulse-Jet Engine. Aircraft Engine Research
+            Laboratory. Cleveland, Ohio. Memorandum Report E6G01, NACA, Washington, 1946. - 19 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/5. 1946 NACA Report V-1 Все характерист.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            6. Bressman J.R. Effect of a Low-Loss Air Valve on Performance of a 22-inch-Diameter Pulse-Jet Engine.
+            Aircraft Engine Research Laboratory. Cleveland, Ohio. Memorandum Report E6E15, NACA, Washington, 1946. - 18
+            p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/6. 1946 NACA Report valves.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            7. Shultz-Grunow F. Gas-Dynamic Investigations of the Pulse-Jet Tube. Parts i and II. National Advisory
+            Committee for Aeronautics. Technical Memorandum No. 1131. Technical High School, Aachen, Germany. NACA,
+            Washington, 1947. - 112 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/7. 1947 NACA Report Classic Schultz Grunov research.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            8. Zipkin M.A. and Lewis G.W., Jr. Analytical and Experimental Performance of an ExplosioN -Cycle Combustion
+            Chamber for a Jet-Propulsion Engine. National Advisory Committee for Aeronautics. Technical Note No. 1702.
+            Cleveland, Ohio. NACA, Washington, 1947. - 62 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/8. 1947 NACA Report pulse cycle.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            9. Litke P.J., Schauer F.R., Paxson D.E., Bradley R.P. and Hoke J.L. Assessment of the Performance of a
+            Pulsejet and Comparison with a Pulsed-Detonation Engine. Air Force Research Laboratory, Propulsion
+            Directorate, Wright-Patterson AFB, OH 45433. 43rd AIAA Aerospace Sciences Meeting and Exhibit, Reno, Nevada,
+            January 10-13, 2005. - 10 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/9. Эксперимент Solar PJ32 Assessment of the performance 2005.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            10. Van Heerbeek P.A. Mathematical Modelling of a Pulse Combustor of the Helmholtz-type. A thesis to the
+            Delft Institute of Applied Mathematics, for the degree Master of science in applied mathematics. Delft, the
+            Netherlands, August 2008. - 189 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/10. RCS model MSc_Thesis_Final.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            11. Melo A.S.M. Pulsejet Engine Performance Estimation (Versão Revista Após Discussão). Dissertação para
+            obtenção do Grau de Mestre em Engenharia Aeronáutica (Ciclo de estudos integrado). Universidade da beira
+            interior, Engenharia, Covilhã, março de 2019. - 92 p.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/11. ANSYS valveless pulse jet 2019.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            12. Ahmadian S. Computational Approach in Sizing of Pulsejet Engine. Emirates University, January 2014. - 25
+            p. Available at: https://www.researchgate.net/publication/284511823
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/12. journal-edit 2015.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <h3>
+        <p style="text-align: justify;">{{ t.text7|safe }}</p>
+      </h3>
+
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            13. Khrulev A. Modeling Work-Flow of the “Cylinder-Piston” Type Devices Using a Universal Thermodinamic
+            Model. Evolutions Mech Eng. 5(4). EME.000618. 2024. - 8 p. DOI:
+            <a href="https://doi.org/10.31031/EME.2024.05.000618"
+              target="_blank">https://doi.org/10.31031/EME.2024.05.000618</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/13. Стаття 2024 EME Thermodinamic modeling.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            13. Khrulev A. Modeling Work-Flow of the “Cylinder-Piston” Type Devices Using a Universal Thermodinamic
+            Model. Evolutions Mech Eng. 5(4). EME.000618. 2024. - 8 p. DOI:
+            <a href="https://doi.org/10.31031/EME.2024.05.000618"
+              target="_blank">https://doi.org/10.31031/EME.2024.05.000618</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/13. Стаття 2024 EME Thermodinamic modeling.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            14. Khrulev A. Determination of gas parameters in resonant pipes and channels of engines with a periodic
+            workflow using the piston analogy method. Eastern-European Journal of Enterprise Technologies, 2023, 5 (7
+            (125)), pp. 50–59. DOI:
+            <a href="https://doi.org/10.15587/1729-4061.2023.288520"
+              target="_blank">https://doi.org/10.15587/1729-4061.2023.288520</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/14. 2023 EEJET pipes.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            15. Kravchenko A., Khrulev A., Gerlici A., Saraiev O., Danets S. Technical condition assessment and
+            modelling of reed valves in vehicle engine intake systems. University of Zilina, Communications, 2025, 27
+            (1), pp. B41-B52. DOI:
+            <a href="https://doi.org/10.26552/com.C.2025.006"
+              target="_blank">https://doi.org/10.26552/com.C.2025.006</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/15. 2024 Technical Condition Assessment and Modelling of Reed Valves.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            16. Khrulev A. Modeling of engine with periodic workflow using dimensionless similarity criteria and piston
+            analogy method. World of scientific research, 24 October 2023, Issue 23, Opole, Poland, 2023,pp. 270-274.
+            Aviliable at: .
+            <a href="https://www.economy-confer.com.ua/full-article/4861/"
+              target="_blank">https://www.economy-confer.com.ua/full-article/4861/</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/16. Confa 23-24.10 Opole труба пуврд.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            17. Khrulev A. Mathematical modeling of reed valve operation in engines with periodic workflow. Proceeding
+            of the 11th International scientific and practical conference “Integration of science as a mechanism of
+            effective development” (November 28 - December 01, 2023), Helsinki, Finland, International Science Group,
+            2023, pp. 389-395.17. Khrulev A. Mathematical modeling of reed valve operation in engines with periodic
+            workflow. Proceeding of the 11th International scientific and practical conference “Integration of science
+            as a mechanism of effective development” (November 28 - December 01, 2023), Helsinki, Finland, International
+            Science Group, 2023, pp. 389-395.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/17. Confa Helsinki 28-01.12.23 valve.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            18. Khrulev A, Saraiev O, Saraieva I, Vorobiov O. Modeling of thermodynamic processes in internal combustion
+            engine cylinder during cranking in compression measurement tests. Combustion Engines, 2024, 198 (3),
+            pp.98-109. DOI:
+            <a href="https://doi.org/10.19206/CE-187380" target="_blank">https://doi.org/10.19206/CE-187380</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/18. 2024 Comb engines Compression.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            19. Khrulev A., Saraev O., Saraieva I. Method for expert evaluation of the technical condition of the
+            cylinder-piston group of automotive engines after hydrolock. Vehicle and electronics. Innovative
+            technologies, Vol. 25, 2024, pp.63-70. DOI:
+            <a href="https://doi.org/10.30977/VEIT.2024.25.0.7"
+              target="_blank">https://doi.org/10.30977/VEIT.2024.25.0.7</a>
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg" href="/static/images/biblio/19. Стаття 2024 ХАДИ гидроудар компресія.pdf"
+              role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-group">
+        <div class="row">
+          <div class="col-md-10">
+            20. Khrulev A. Analysis of pneumatic catapult launch system parameters, taking into account engine and UAV
+            characteristics. Advanced UAV, 2023, 3 (1), pp.10-24.
+          </div>
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary btn-lg"
+              href="/static/images/biblio/20. Статья 2023 Analysis  of  pneumatic  launch англ.pdf" role="button">
+              {{ t.text6 }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-group">
+        <p style="text-align: justify;">{{ t.text8 }}</p>
+      </div>
+
+      <p class="text-center">
+        <a class="btn btn-primary btn-lg" href="/" role="button">
+          {{ t.text9 }}
+          <img src="/static/images/00-button-3.png" alt="" style="max-height: 30px;margin-left: 1em;">
+        </a>  
+      </p>
+
+
+
+
+    </div>
+  </div>
 </div>
+
 {% endblock %}

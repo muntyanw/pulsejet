@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block title %}{% trans "Моделирование - Pulsejet" %}{% endblock %}
+{% block title %}{% trans "Modeling - Pulsejet" %}{% endblock %}
 {% block content %}
-<div class="container">
-  <h1>{% trans "Моделирование Рабочего Процесса" %}</h1>
-  <p>{% trans "Интерактивные инструменты для создания моделей рабочих процессов." %}</p>
-  <script>
-    $(document).ready(function(){
-      console.log("{% trans 'Страница моделирования загружена' %}");
-    });
-  </script>
+<div class="p-5 mb-4 bg-light rounded-3 shadow">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center">
+      <img src="/static/images/b-8-2.png" style="width:900px;" alt="Pulsejet contacts" class="img-fluid rounded shadow-sm fade-in">
+    </div>
+  </div>
+  <div class="row align-items-center"></div>
+  <div class="col-md-12 mt-4">
+    <h1 class="display-4 text-center">{{ t.text1 }} </h1>
+    <hr class="my-4">
+  </div>
 </div>
 {% endblock %}

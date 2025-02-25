@@ -110,18 +110,18 @@ texts = {
             "text7":"1. Registration on our website with the name, email address and password – without this, access to advanced functions will not be obtained. The user, in turn, receives a personal account with the corresponding functionality.",
             "text8":"""
                   2. The professional version opens access to the following program functions:
-                  • Access to entering all parameters and dimensions, including program settings.
-                  • Possibility of parametric studies for various engine sizes and flight parameters.
-                  • Memorizing the entered source data in a file and saving them in your account (so as not to re-enter them).
-                  • Plotting parametric study graphs.
-                  • Saving the obtained results to a file, saving them to your account, and the ability to download data files (for further independent research)
+                  <br/>&nbsp;&nbsp;• Access to entering all parameters and dimensions, including program settings.
+                  <br/>&nbsp;&nbsp;• Possibility of parametric studies for various engine sizes and flight parameters.
+                  <br/>&nbsp;&nbsp;• Memorizing the entered source data in a file and saving them in your account (so as not to re-enter them).
+                  <br/>&nbsp;&nbsp;• Plotting parametric study graphs.
+                  <br/>&nbsp;&nbsp;• Saving the obtained results to a file, saving them to your account, and the ability to download data files (for further independent research)
                     """,
             "text9":"""
                   3. The professional version of the program works on a subscription basis. You can subscribe for any period - a week, a month or more. The subscription price is still quite affordable and almost conditional:
-                  • 1 week - 3000 UAH or 70 Euro
-                  • 1 month - 6000 UAH or 140 Euro
-                  • 3 months - 9000 UAH or 210 Euro
-                  • 6 months - 12000 UAH or 280 Euro
+                  <br/>&nbsp;&nbsp;• 1 week - 3000 UAH or 70 Euro
+                  <br/>&nbsp;&nbsp;• 1 month - 6000 UAH or 140 Euro
+                  <br/>&nbsp;&nbsp;• 3 months - 9000 UAH or 210 Euro
+                  <br/>&nbsp;&nbsp;• 6 months - 12000 UAH or 280 Euro
                   """,
             "text10":"4. Payment for access to the professional version can be easily transferred to our company card. After the money has been received into the account, the professional version will be activated in the user's personal account within a few hours. Well, if you have any difficulties registering, paying and/or gaining access to the professional version of the program, please contact our support service immediately.",
             "text11":"Happy launch!",
@@ -148,9 +148,9 @@ texts = {
             "text16":"1. Thermodynamic model of pressure and temperature changes in the combustion chamber.",
             "text17":"If we assume that the instantaneous pressure and temperature are the same for the allocated volume of the combustion chamber, then we can use the equation of the 1st law of thermodynamics written for a cylinder. From which it follows that:",
             "text18":"In reality, heat release does not occur simultaneously with the air intake. On the contrary, at each moment of intake time, only a small portion of air enters the combustion chamber, which is then mixed with the fuel, heated, the fuel evaporates, and only after that this portion of the fuel-air mixture ignites. That is why our model establishes a phase shift in the heat release rate relative to the instantaneous mass flow rate of air. This phase shift is the ignition delay time, which is calculated depending on the pressure and temperature according to the Arrhenius law. However, in relation to our problem, an attempt to directly calculate the ignition delay time gives not quite realistic results, causing instability of the calculation, which is why we switched to relative parameters, but maintaining the general nature of the dependence of time on pressure and temperature. As a result, we obtained the following formula:",
-            "text19":"At present, when the work on finalizing the model is not yet finished, heat losses in the walls are temporarily not taken into account when solving the equations for temperature and pressure. Instead, we simply reduce the value of η0, for now, taking it equal to η0 = 0.70-0.75 instead of η0 = 0.95-0.98. Nevertheless, the wall temperature in the model is calculated separately according to the corresponding heat balance equations, taking into account the heat capacity of the walls. This is done due to the discovered problems with the convergence of the solution of the system of differential equations when trying to include the heat flux in the walls in these equations (however, we are working to find and eliminate the cause of such instability).",
-            "text20":"2. Gas flow through a pipe.",
-            "text21":"To obtain the calculation equations, we consider a flow with subsonic speeds and pressure differences and assume that the instantaneous pressure, temperature and gas velocity are the same at all points in the pipe. This assumption is applicable for relatively short pipes and reduces the model under consideration to the so-called piston analogy of gas flow, that is, to the model of a ‘liquid’ or ‘gas’ piston. Then the movement of gas through the pipe is considered as the movement of a gas column of a certain mass, which has the properties of inertia. This means that under the action of a time-varying pressure difference, the velocity of the gas will lag behind the pressure – approximately the same as when waves move in a pipe. ",
+            "text19":"В даний час, коли ще не закінчена робота з доведення моделі, теплові втрати в стінки при вирішенні рівнянь температури і тиску тимчасово не враховуються. Натомість ми поки що просто зменшуємо величину η0, приймаючи її рівною не η0 = 0,95-0,98, а η0 = 0,70-0,75. Тим не менш, температура стінок у моделі вважається окремо за відповідними рівняннями теплового балансу з урахуванням теплоємності стінок. Так зроблено у зв'язку з виявленими проблемами збіжності розв'язання системи диференціальних рівнянь при спробі включити в ці рівняння тепловий потік у стінки (проте ми працюємо над тим, щоб знайти та усунути причину такої нестійкості).",
+            "text20":"2. Течія газу трубою.",
+            "text21":"Щоб отримати розрахункові рівняння, розглянемо перебіг з дозвуковими швидкостями та перепадами тисків і припустимо, що у всіх точках труби миттєві тиск, температуру та швидкість газу однакові. Таке припущення застосовно для порівняно коротких труб і зводить модель до так званої поршневої аналогії течії газу, тобто, до моделі ‘рідинного’ або ‘газового’ поршня. Тоді рух газу трубою розглядається як рух стовпа газу деякої маси, яка має властивості інерції. Це означає, що під дією змінного за часом перепаду тиску швидкість руху газу відставатиме від тиску – приблизно так само, як і під час руху хвиль у трубі.  ",
             "text22":"Calculation scheme of the piston analogy method (‘liquid’ piston):",
             "text23":"1 - control volume, 2 - cone (nozzle), 3 - resonance pipe.",
             "text24":"Thus, it is obvious that the solution to the problem should be sought in the form of an equation for the velocity of the gas column in the pipe. It is important that the desired velocity is related to the thermodynamic model describing the state of the gas in the control volume to which the pipe is connected. The main calculation equations describing gas-dynamic processes in the pipe in a 1-dimensional approximation are the continuity equation:",
@@ -170,6 +170,49 @@ texts = {
                               The logic of the algorithm determines these moments with high accuracy, and the first thing that is required is to determine the cycle time tc as the time of the start of the intake from a similar previous moment in time. This is a fundamentally important feature of the model - the cycle is not specified in any way, but is determined by the processes that occur in it and are described by the corresponding equations.
             """,
             "text34":"VISIT OUR LIBRARY",
+            "formula1":"formula1",
+            "formula2":"formula2",
+            "formula3":"formula3",
+            "formula4":"formula4",
+            "formula5":"formula5",
+            "formula6":"formula6",
+            "formula7":"formula7",
+            "formula8":"formula8",
+            "formula9":"formula9",
+            "formula10":"formula10",
+            "formula11":"formula11",
+            "formula12":"formula12",
+            "formula13":"formula13",
+            "formula14":"formula14",
+            "formula15":"formula15",
+            "formula18":"formula18",
+            "formula19":"formula19",
+            "formula20":"formula20"
+      },
+      "what-to-read":{
+            "text1":"Pulsejet engine?",
+            "text2":"It turns out that it can be simulated too!",
+            "text3":"Here we provide links to some fundamental works on the processes and modeling of pulsejet engines. These include declassified NASA reports from the 1940s and 1950s on the work in which the captured German Argus-014 engine was fully and completely examined. We especially note the work of German Professor F.Schulz-Grunow on modeling a pulsejet engine using the characteristics method. Unfortunately, due to total Soviet secrecy, aggravated by complete uselessness, it was not possible to find even a mention of the works of Soviet Professor E.Shchetinkov from the 1940s on the theory and modeling of pulsejets, but we filled this gap with our own works on this problem.",
+            "text4":"You can read or even download all these works directly from our website.",
+            "text5":"Classical and some modern works on pulsejets:",
+            "text6":"Download",
+            "text7":"Our work on modeling pulsejets and similar processes:",
+            "text8":"Of course, these works do not exhaust our knowledge base on the processes in pulsejets, and we will gradually add works here as needed.",
+            "text9":"HOME"
+      },
+      "contacts":{
+            "text1":"Simulating pulsejet engine, but something doesn't work?",
+            "text2":"Then we will help. In any case. Just contact us – leave a message by filling out the form below.",
+            "text3":"Describe the problem in detail; attach data, files and screenshots. We will figure it out and solve this problem, do not hesitate.",
+            "text4":"Send message",
+            "text5":"Name",
+            "text6":"E-mail",
+            "text7":"Enter message text",
+            "text8":"Attach files",
+            "text9":"Send"
+      },
+      "modeling":{
+            "text1":"Modeling in developing"
       }
 }
 

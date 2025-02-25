@@ -1,9 +1,47 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block title %}{% trans "Описание - Pulsejet" %}{% endblock %}
+{% block title %}{% trans "How use - Pulsejet" %}{% endblock %}
 {% block content %}
-<div class="container">
-  <h1>{% trans "Контакты" %}</h1>
-  <p>{% trans "..." %}</p>
+<div class="p-5 mb-4 bg-light rounded-3 shadow">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center">
+      <img src="/static/images/8. Contacts.png" style="width:900px;" alt="Pulsejet contacts" class="img-fluid rounded shadow-sm fade-in">
+    </div>
+  </div>
+  <div class="row align-items-center"></div>
+  <div class="col-md-12 mt-4">
+    <h1 class="display-4 text-center">{{ t.text1 }} </h1>
+    <p class="text-center" style="font-size: 2em;font-weight: 300;">{{ t.text2 }}</p>
+    <hr class="my-4">
+    <div class="text-group">
+      <p style="text-align: justify;">{{ t.text3 }}</p>
+    </div>
+    
+    <!-- Форма обратной связи -->
+    <div class="contact-form mt-4 p-4 bg-white rounded shadow-sm">
+      <h2 class="text-center">{% trans "Свяжитесь с нами" %}</h2>
+      <form method="post" action="{% url 'contacts' %}" class="mt-3">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">{% trans "Ваше имя" %}</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">{% trans "Ваш Email" %}</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">{% trans "Сообщение" %}</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary btn-lg">
+            {% trans "Отправить" %}
+            <img src="/static/images/00-button-3.png" alt="" style="max-height: 30px;margin-left: 1em;">
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 {% endblock %}

@@ -4,8 +4,8 @@
 {% block content %}
 <div class="p-5 mb-4 bg-light rounded-3 shadow">
   <div class="row align-items-center">
-    <div class="col-md-12">
-      <img src="/static/images/3. How to start.png" alt="Pulsejet how to start" class="img-fluid">
+    <div class="col-md-12 text-center">
+      <img src="/static/images/3. How to start.png" style="width:900px;" alt="Pulsejet how to start" class="img-fluid rounded shadow-sm fade-in">
     </div>
   </div>
   <div class="row align-items-center"></div>
@@ -21,7 +21,8 @@
       <p style="text-align: justify;">{{ t.text5 }}</p>
       <p style="text-align: justify;">{{ t.text6 }}</p>
       <p style="text-align: justify;">{{ t.text7 }}</p>
-      <p style="text-align: justify;">{{ t.text8 }}</p>
+      <p style="text-align: justify;">{{ t.text8|safe }}</p>
+      <p style="text-align: justify;">{{ t.text9|safe }}</p>
       <p style="text-align: justify;">{{ t.text10 }}</p>
       <p style="text-align: justify;">{{ t.text11 }}</p>
     </div>
